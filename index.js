@@ -33,7 +33,7 @@ app.use(
             "http://localhost:5174",
             "http://localhost:4114",
           ],
-          credentials: true,
+          credentials: false,
         }
       : {
           origin: [
@@ -51,7 +51,7 @@ app.use(
           ],
           methods: ["GET", "PUT", "POST", "PATCH", "DELETE"],
           allowedHeaders: ["Content-Type", "Authorization", "x-csrf-token"],
-          credentials: true,
+          credentials: false,
           maxAge: 600,
           exposedHeaders: ["*", "Authorization"],
         }
