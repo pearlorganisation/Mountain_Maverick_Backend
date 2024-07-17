@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 
 
 const charDhamSchema = new mongoose.Schema({
-
     title:{
         type:String,
         required: true,
@@ -33,6 +32,15 @@ const charDhamSchema = new mongoose.Schema({
     },
     do_not:{
         type:[]
+    },
+    rating: {
+        type:String
+    },
+    difficulty: {
+        type:String
+    },
+    startDates: {
+        type:[Date]
     }
     
        
