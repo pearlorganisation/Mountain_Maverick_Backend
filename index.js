@@ -7,7 +7,7 @@ import { connectMongo } from "./src/configs/db/mongo/mongoConfig.js";
 import { envAccess } from "./src/utils/index.js";
 import { CustomError } from "./src/utils/errors/customError.js";
 import morgan from "morgan";
-import trekRouter from "./src/routes/treks/treks.js"
+import trekRouter from "./src/routes/treks/treks.js";
 import charDhamRoutes from "./src/routes/charDhamRoutes/CharDhamRoutes.js";
 // -------------------------------------------------------------------------------------------------------------
 dotenv.config();
@@ -22,7 +22,6 @@ app.use(
     process.env.NODE_ENV === "production"
       ? {
           origin: [
-         
             "https://mountain-maverick-frontend.vercel.app/",
             "http://localhost:4112",
             "http://localhost:3000",
@@ -37,7 +36,6 @@ app.use(
         }
       : {
           origin: [
-        
             "https://mountain-maverick-frontend.vercel.app/",
             "http://localhost:4112",
             "http://localhost:3000",
@@ -47,13 +45,9 @@ app.use(
             "http://localhost:5010",
             "http://localhost:4113",
             "http://localhost:4114",
-
           ],
           methods: ["GET", "PUT", "POST", "PATCH", "DELETE"],
-          allowedHeaders: ["Content-Type", "Authorization", "x-csrf-token"],
           credentials: false,
-          maxAge: 600,
-          exposedHeaders: ["*", "Authorization"],
         }
   )
 );
@@ -62,7 +56,7 @@ app.use(
 // express.json() -- middleware to parse the json coming from the http request
 app.use(express.json());
 
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 
 // cookieParser() -- middleware to parse the cookie coming from the http request
 // app.use(cookieParser());
@@ -80,15 +74,11 @@ app.all(["/", "/api", "/api/v1"], (req, res, next) => {
   });
 });
 
-//Tracks Routes 
-app.use(versionOne('treks'), trekRouter);
-app.use(versionOne('char_dham'), charDhamRoutes);
+//Tracks Routes
+app.use(versionOne("treks"), trekRouter);
+app.use(versionOne("char_dham"), charDhamRoutes);
 
-
-//India's Char  Dham Route 
-
-
-
+//India's Char  Dham Route
 
 // -------------------------------------------------------------------------------------------------------------
 
