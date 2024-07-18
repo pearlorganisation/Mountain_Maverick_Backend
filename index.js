@@ -19,7 +19,7 @@ connectMongo();
 // ----------------------------------------------CORS HANDLING-------------------------------------------------
 app.use(
   cors(
-    process.env.NODE_ENV === "production"
+    process.env.NODE_WORKING_ENVIRONMENT === "production"
       ? {
           origin: [
             "https://mountain-maverick-frontend.vercel.app/",
