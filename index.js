@@ -22,7 +22,7 @@ app.use(
     process.env.NODE_WORKING_ENVIRONMENT === "production"
       ? {
           origin: [
-            "https://mountain-maverick-frontend.vercel.app/",
+            "https://mountain-maverick-frontend.vercel.app",
             "http://localhost:4112",
             "http://localhost:3000",
             "http://localhost:3001",
@@ -35,7 +35,7 @@ app.use(
         }
       : {
           origin: [
-            "https://mountain-maverick-frontend.vercel.app/",
+            "https://mountain-maverick-frontend.vercel.app",
             "http://localhost:4112",
             "http://localhost:3000",
             "http://localhost:3001",
