@@ -31,8 +31,7 @@ app.use(
             "http://localhost:5173",
             "http://localhost:5174",
             "http://localhost:4114",
-          ],
-          credentials: false,
+          ]
         }
       : {
           origin: [
@@ -46,8 +45,8 @@ app.use(
             "http://localhost:4113",
             "http://localhost:4114",
           ],
-          methods: ["GET", "PUT", "POST", "PATCH", "DELETE"],
-          credentials: false,
+          methods: ["GET", "PUT", "POST", "PATCH", "DELETE"]
+        
         }
   )
 );
