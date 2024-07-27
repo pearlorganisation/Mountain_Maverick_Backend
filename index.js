@@ -79,6 +79,7 @@ app.all(["/", "/api", "/api/v1"], (req, res, next) => {
 //Tracks Routes 
 app.use(versionOne('treks'), trekRouter);
 app.use(versionOne('char_dham'), charDhamRoutes);
+app.use(versionOne('tour'), tourRouter);
 
 
 //India's Char  Dham Route
