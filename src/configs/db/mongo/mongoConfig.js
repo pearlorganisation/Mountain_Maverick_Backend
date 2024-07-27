@@ -1,8 +1,9 @@
 // ---------------------------------------------Imports---------------------------------------------------
 import mongoose from "mongoose";
 
-
 import { envAccess } from "../../../utils/index.js";
+// import { configDotenv } from "dotenv";
+// configDotenv({ path: ".././config" });
 // -------------------------------------------------------------------------------------------------------
 
 // connectMongo -- function to call in order to connect to the database
