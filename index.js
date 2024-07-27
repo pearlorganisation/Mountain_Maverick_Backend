@@ -9,6 +9,7 @@ import { CustomError } from "./src/utils/errors/customError.js";
 import morgan from "morgan";
 import trekRouter from "./src/routes/treks/treks.js"
 import charDhamRoutes from "./src/routes/charDhamRoutes/CharDhamRoutes.js";
+import tourRouter from "./src/routes/tour/tour.js";
 // -------------------------------------------------------------------------------------------------------------
 dotenv.config();
 
@@ -22,8 +23,7 @@ app.use(
     process.env.NODE_ENV === "production"
       ? {
           origin: [
-            "https://hot-house.vercel.app",
-            "https://hot-house-9gco.vercel.app",
+            "https://mountain-maverick-frontend.vercel.app/",
             "http://localhost:4112",
             "http://localhost:3000",
             "http://localhost:3001",
@@ -37,8 +37,7 @@ app.use(
         }
       : {
           origin: [
-            "https://hot-house.vercel.app",
-            "https://hot-house-9gco.vercel.app",
+            "https://mountain-maverick-frontend.vercel.app/",
             "http://localhost:4112",
             "http://localhost:3000",
             "http://localhost:3001",
@@ -83,6 +82,7 @@ app.all(["/", "/api", "/api/v1"], (req, res, next) => {
 //Tracks Routes 
 app.use(versionOne('treks'), trekRouter);
 app.use(versionOne('char_dham'), charDhamRoutes);
+app.use(versionOne('tour'), tourRouter);
 
 
 //India's Char  Dham Route 

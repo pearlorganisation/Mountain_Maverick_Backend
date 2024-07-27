@@ -4,15 +4,14 @@ import { upload } from "../../configs/cloudinary.js";
 
 
 
+const router = express.Router();
 
-export const tourRouter = express.Router();
 
-
-tourRouter.route("/")
+router.route("/")
 .get(getAllTreks)
 .post(upload.single('banner'),createTrek);
 
-tourRouter.route("/:id")
+router.route("/:id")
 .get(getTrek)
 .delete(deleteTrek)
 .put(updateTrek);
@@ -23,4 +22,4 @@ tourRouter.route("/:id")
 
 
 
-export default tourRouter;
+export default router;
