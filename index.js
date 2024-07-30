@@ -23,8 +23,7 @@ app.use(
     process.env.NODE_WORKING_ENVIRONMENT === "production"
       ? {
           origin: [
-            "https://hot-house.vercel.app",
-            "https://hot-house-9gco.vercel.app",
+
             "http://localhost:4112",
             "http://localhost:3000",
             "http://localhost:3001",
@@ -37,8 +36,7 @@ app.use(
         }
       : {
           origin: [
-            "https://hot-house.vercel.app",
-            "https://hot-house-9gco.vercel.app",
+
             "http://localhost:4112",
             "http://localhost:3000",
             "http://localhost:3001",
