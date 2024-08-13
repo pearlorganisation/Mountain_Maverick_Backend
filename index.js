@@ -33,7 +33,7 @@ app.use(
             "http://localhost:5174",
             "http://localhost:4114",
             "http://localhost:5175",
-            "https://mountain-maverick-frontend.vercel.app/",
+            "https://mountain-maverick-frontend.vercel.app",
           ]
         }
       : {
