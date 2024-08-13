@@ -13,9 +13,7 @@ export const getAllTour = asyncErrorHandler(async(req, res,next) => {
 
 export const getTour = asyncErrorHandler(async (req, res, next) => {
     
-    const data = await tour.find({
-
-    }).lean();
+    const data = await tour.findById(req.params.id);
     res.status(200).json({ status: true, message: "Data Fetched Successfully !!", data });
     
 })

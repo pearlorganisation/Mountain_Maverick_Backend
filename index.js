@@ -23,8 +23,7 @@ app.use(
     process.env.NODE_WORKING_ENVIRONMENT === "production"
       ? {
           origin: [
-            "https://hot-house.vercel.app",
-            "https://hot-house-9gco.vercel.app",
+
             "http://localhost:4112",
             "http://localhost:3000",
             "http://localhost:3001",
@@ -33,12 +32,13 @@ app.use(
             "http://localhost:5173",
             "http://localhost:5174",
             "http://localhost:4114",
+            "http://localhost:5175",
+            "https://mountain-maverick-frontend.vercel.app/",
           ]
         }
       : {
           origin: [
-            "https://hot-house.vercel.app",
-            "https://hot-house-9gco.vercel.app",
+
             "http://localhost:4112",
             "http://localhost:3000",
             "http://localhost:3001",
@@ -47,6 +47,7 @@ app.use(
             "http://localhost:5010",
             "http://localhost:4113",
             "http://localhost:4114",
+            "http://localhost:5175",
           ],
           methods: ["GET", "PUT", "POST", "PATCH", "DELETE"]
         
@@ -79,7 +80,7 @@ app.all(["/", "/api", "/api/v1"], (req, res, next) => {
 //Tracks Routes 
 app.use(versionOne('treks'), trekRouter);
 app.use(versionOne('char_dham'), charDhamRoutes);
-app.use(versionOne('tour'),tourRouter);
+app.use(versionOne('tour'), tourRouter);
 
 
 //India's Char  Dham Route
