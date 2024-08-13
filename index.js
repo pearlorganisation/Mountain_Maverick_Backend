@@ -32,6 +32,8 @@ app.use(
             "http://localhost:5173",
             "http://localhost:5174",
             "http://localhost:4114",
+            "http://localhost:5175",
+            "https://mountain-maverick-frontend.vercel.app/",
           ]
         }
       : {
@@ -45,6 +47,7 @@ app.use(
             "http://localhost:5010",
             "http://localhost:4113",
             "http://localhost:4114",
+            "http://localhost:5175",
           ],
           methods: ["GET", "PUT", "POST", "PATCH", "DELETE"]
         
